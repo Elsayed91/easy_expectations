@@ -8,6 +8,21 @@
   <a href=""> <img src="docs/images/demo.gif" alt="x" height="450"> </a>
   </div>
 
+<!-- <div align="center">
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <a href="">
+            <img src="docs/images/gewrap.png" alt="Logo" width="150" height="150">
+        </a>
+        <div style="margin-left: 20px;">
+            <h3>Easy Expectations — A Great Expectations Wrapper</h3>
+            <p>30 Seconds to get GX up and running!</p>
+        </div>
+    </div>
+    <a href="">
+        <img src="docs/images/demo.gif" alt="x" height="450">
+    </a>
+</div> -->
+
 
 ## Features
 Easy Expectations is a wrapper to streamline your Great Expectations experience.
