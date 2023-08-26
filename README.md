@@ -196,7 +196,7 @@ Inside the configuration file
 GCP:
   Project: myproject
 
-Mappings
+Mappings:
   default_gcp_project: GCP/Project
 ```
 then
