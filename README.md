@@ -192,13 +192,13 @@ python -m easy_expectations run \
 Lets say I want to add my default GCP Project to a GCP dedicated field with the help of a mapping key.
 
 Inside the configuration file
-
+```yaml
 GCP:
   Project: myproject
 
 Mappings
 default_gcp_project: GCP/Project
-
+```
 then
 ```python
 from easy_expectations import run_ex
