@@ -197,7 +197,7 @@ GCP:
   Project: myproject
 
 Mappings
-default_gcp_project: GCP/Project
+  default_gcp_project: GCP/Project
 ```
 then
 ```python
