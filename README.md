@@ -213,13 +213,15 @@ Now the variable will be found despite the different structure.
 ## Roadmap
 
 These features are planned or already implemented but require testing.
+### In Progress
+- Azure Support. Code exists, needs testing.
+- Allow providing Config files in `PascalCase` and `snake_case` by default. Code exists, needs to be implemented.
 
-- Azure Support
-- Config file styling to allow snake case & pascal case as different ways to provide the configuration
+### Planned
 - [Multiple Batch Request](https://docs.greatexpectations.io/docs/guides/validation/checkpoints/how_to_add_validations_data_or_suites_to_a_checkpoint)
 - [Litellm](https://github.com/BerriAI/litellm/tree/main) Support for non-openai models
 - Batch_Spec_passthrough options
-- Validate AI Generated Expectations against a list of existing expectations.
+- Validate AI Generated Expectations against a list of existing expectations, mainly to counteract GPT's tendancy to make up an expectation when a request is passed and a corressponding expectation doesn't exist, for example if you ask the model to ensure that a value is a positive integer it will use `expect_column_value_to_be_positive_integer` which doesn't exist. It is hard to counteract this behavior without increasing token consumption.
 
 ## Notes
 
