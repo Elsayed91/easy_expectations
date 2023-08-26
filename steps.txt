@@ -1,3 +1,0 @@
-data source: local:local_tests/sample_data.csv
-artifacts_location: local:local_tests/ge
-Requirements: 1. expect Name values to be unique. 2. expect Age to be between 0 and 100 3. expect Salary to be between 0 and 5000000 4. expect Department to be one of HR, IT, Finance\ncc\ny"

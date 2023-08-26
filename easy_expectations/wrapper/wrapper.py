@@ -198,7 +198,6 @@ class GreatExpectationsWrapper:
                 self.context_dict.get("contract_column_set_matching", False),
             )
         elif expectations_suite_name:
-            logger.info("failing here? _get_expectation_suite_builder")
             tests = self.context_dict.get("tests", [])
             return TestsExpectationSuiteBuilder(
                 tests, "0.17.9", expectations_suite_name

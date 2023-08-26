@@ -4,10 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'easy_expectations/**'
   pull_request:
     branches:
       - main
-
+    paths:
+      - 'easy_expectations/**'
 
 jobs:
   test:
