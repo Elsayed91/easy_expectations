@@ -4,7 +4,7 @@
 <div align="center">
   <a href=""> <img src="docs/images/gewrap.png" alt="Logo" width="150" height="150"> </a>
   <h3 align="center">Easy Expectations — A Great Expectations Wrapper</h3>
-  <p align="center">Great Expectations made easy!</p>
+  <p align="center">30 Seconds to get GX up and running!</p>
   <a href=""> <img src="docs/images/demo.gif" alt="x" height="450"> </a>
   </div>
 
