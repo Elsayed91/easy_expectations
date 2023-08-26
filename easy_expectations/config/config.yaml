@@ -1,0 +1,7 @@
+# Files
+easy_expectations_skeleton: filepath:cli/data/empty_config_template.yaml
+data_systems_info_file_path: filepath:config_enhancer/data_systems_info.yaml
+config_mapper_vars_file_path: filepath:config_mapper/var_mapping.yaml
+datatypes_info: filepath:ai_expectations/data/datatypes.yaml
+core_expectations: filepath:ai_expectations/data/expectations_support.csv
+

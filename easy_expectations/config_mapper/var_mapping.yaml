@@ -1,0 +1,146 @@
+# Options
+## default auth
+default_gcp_project: Options/GCP Defaults/GCP Project
+default_assume_role_arn: Options/AWS Defaults/Assume Role Arn
+default_assume_role_duration: Options/AWS Defaults/Assume Role Duration
+default_aws_session_token: Options/AWS Defaults/AWS Session Token
+default_aws_secret_access_key: Options/AWS Defaults/AWS Secret Access Key
+default_aws_access_key_id: Options/AWS Defaults/AWS Access Key ID
+default_s3_region: Options/AWS Defaults/S3 Region
+default_boto_endpoint: Options/AWS Defaults/Boto Endpoint
+default_azure_connection_string: Options/Azure Defaults/Azure Connection String
+default_azure_account_url: Options/Azure Defaults/Azure Account URL
+default_azure_protected_container_credentials: Options/Azure Defaults/Azure Protected Container Credentials
+
+batch_limit: Options/Batch/Limit
+batch_identifiers: Options/Batch/Identifiers/
+checkpoint_name: Options/Checkpoint Name
+disable_docs: Options/Disable Docs
+run_name_template: Options/Run Name
+custom_expectations_path: Options/Custom Expectations Path
+success_threshold: Options/Success Threshold
+print_summary_table: Options/Print Summary Table
+generate_summary_csv: Options/Summary CSV
+evaluation_parameters: Options/Evaluation Parameters
+result_format: Options/Result Format
+connector_query_index: Options/Connector Query Index
+enable_usage_statistic: Options/Enable Statistics
+
+# Data Connector
+data_connector_path: Data Source/Source
+data_connector_name: Data Source/Name
+data_connector_execution_engine: Data Source/Engine
+data_connector_table: Data Source/Table
+data_connector_query: Data Source/Query
+data_connector_dataframe: Data Source/Dataframe
+data_connector_connection_string: Data Source/Connection String
+data_connector_azure_connection_string: Data Source/Azure Connection String
+data_connector_azure_account_url: Data Source/Azure Account URL
+data_connector_azure_protected_container_credentials: Data Source/Azure Protected Container Credentials
+data_connector_gcp_project: Data Source/GCP Project
+data_connector_assume_role_arn: Data Source/Assume Role Arn
+data_connector_assume_role_duration: Data Source/Assume Role Duration
+data_connector_aws_session_token: Data Source/AWS Session Token
+data_connector_aws_secret_access_key: Data Source/AWS Secret Access Key
+data_connector_aws_access_key_id: Data Source/AWS Access Key ID
+data_connector_s3_region: Data Source/S3 Region
+data_connector_boto_endpoint: Data Source/Boto Endpoint
+
+# artifacts
+artifacts_path: Artifacts/Location
+checkpoint_store_name: Artifacts/Stores/Checkpoint/Name
+checkpoint_store_path: Artifacts/Stores/Checkpoint/Location
+checkpoint_store_azure_connection_string: Artifacts/Stores/Checkpoint/Azure Connection String
+checkpoint_store_azure_account_url: Artifacts/Stores/Checkpoint/Azure Account URL
+checkpoint_store_azure_protected_container_credentials: Artifacts/Stores/Checkpoint/Azure Protected Container Credentials
+checkpoint_store_s3_region: Artifacts/Stores/Checkpoint/S3 Region
+checkpoint_store_boto_endpoint: Artifacts/Stores/Checkpoint/Boto Endpoint
+checkpoint_store_assume_role_arn: Artifacts/Stores/Checkpoint/Assume Role Arn
+checkpoint_store_assume_role_duration: Artifacts/Stores/Checkpoint/Assume Role Duration
+checkpoint_store_aws_session_token: Artifacts/Stores/Checkpoint/AWS Session Token
+checkpoint_store_aws_secret_access_key: Artifacts/Stores/Checkpoint/AWS Secret Access Key
+checkpoint_store_aws_access_key_id: Artifacts/Stores/Checkpoint/AWS Access Key ID
+checkpoint_store_gcp_project: Artifacts/Stores/Checkpoint/GCP Project
+validations_store_name: Artifacts/Stores/Validations/Name
+validations_store_location: Artifacts/Stores/Validations/Location
+validations_store_azure_connection_string: Artifacts/Stores/Validations/Azure Connection String
+validations_store_azure_account_url: Artifacts/Stores/Validations/Azure Account URL
+validations_store_azure_protected_container_credentials: Artifacts/Stores/Validations/Azure Protected Container Credentials
+validations_store_s3_region: Artifacts/Stores/Validations/S3 Region
+validations_store_boto_endpoint: Artifacts/Stores/Validations/Boto Endpoint
+validations_store_assume_role_arn: Artifacts/Stores/Validations/Assume Role Arn
+validations_store_assume_role_duration: Artifacts/Stores/Validations/Assume Role Duration
+validations_store_aws_session_token: Artifacts/Stores/Validations/AWS Session Token
+validations_store_aws_secret_access_key: Artifacts/Stores/Validations/AWS Secret Access Key
+validations_store_aws_access_key_id: Artifacts/Stores/Validations/AWS Access Key ID
+validations_store_gcp_project: Artifacts/Stores/Validations/GCP Project
+expectations_store_name: Artifacts/Stores/Expectations/Name
+expectations_store_location: Artifacts/Stores/Expectations/Location
+expectations_store_azure_connection_string: Artifacts/Stores/Expectations/Azure Connection String
+expectations_store_azure_account_url: Artifacts/Stores/Expectations/Azure Account URL
+expectations_store_azure_protected_container_credentials: Artifacts/Stores/Expectations/Azure Protected Container Credentials
+expectations_store_s3_region: Artifacts/Stores/Expectations/S3 Region
+expectations_store_boto_endpoint: Artifacts/Stores/Expectations/Boto Endpoint
+expectations_store_assume_role_arn: Artifacts/Stores/Expectations/Assume Role Arn
+expectations_store_assume_role_duration: Artifacts/Stores/Expectations/Assume Role Duration
+expectations_store_aws_session_token: Artifacts/Stores/Expectations/AWS Session Token
+expectations_store_aws_secret_access_key: Artifacts/Stores/Expectations/AWS Secret Access Key
+expectations_store_aws_access_key_id: Artifacts/Stores/Expectations/AWS Access Key ID
+expectations_store_gcp_project: Artifacts/Stores/Expectations/GCP Project
+evaluation_parameter_name: Artifacts/Stores/Evaluation Parameter/Name
+doc_sites: Artifacts/Documentation Sites
+
+# Integrations
+## Slack
+slack_alerting_webhook: Integrations/Slack/Webhook
+slack_alerting_token: Integrations/Slack/Token
+slack_alerting_notify_on: Integrations/Slack/Notify On
+slack_alerting_reference_sites: Integrations/Slack/Reference Sites
+slack_alerting_show_failed_expectations: Integrations/Slack/Show Failed Expectations
+slack_alerting_channel: Integrations/Slack/Channel
+
+## email
+email_alerting_smtp_address: Integrations/Email/SMTP Address
+email_alerting_smtp_port: Integrations/Email/SMTP Port
+email_alerting_sender_login: Integrations/Email/Sender Email
+email_alerting_sender_password: Integrations/Email/Sender Password
+email_alerting_sender_alias: Integrations/Email/Sender Alias
+email_alerting_receiver_emails: Integrations/Email/Receiver Emails
+email_alerting_use_tls: Integrations/Email/Use TLS
+email_alerting_use_ssl: Integrations/Email/Use SSL
+email_alerting_notify_on: Integrations/Email/Notify On
+email_alerting_reference_sites: Integrations/Email/Reference Sites
+## teams
+teams_alerting_webhook: Integrations/Teams/Webhook
+teams_alerting_notify_on: Integrations/Teams/Notify On
+## opsgenie_alerting
+opsgenie_alerting_api_key: Integrations/Opsgenie_alerting/API Key
+opsgenie_alerting_region: Integrations/Opsgenie_alerting/Region
+opsgenie_alerting_priority: Integrations/Opsgenie_alerting/Priority
+opsgenie_alerting_notify_on: Integrations/Opsgenie_alerting/Notify On
+opsgenie_alerting_tags: Integrations/Opsgenie_alerting/Tags # List items
+## pagerduty
+pagerduty_alerting_api_key: Integrations/Pagerduty/API Key
+pagerduty_alerting_notify_on: Integrations/Pagerduty/Notify On
+pagerduty_alerting_routing_key: Integrations/Pagerduty/Routing Key # The 32 character Integration Key for an integration on a service or on a global ruleset.
+## SNS
+sns_alerting_topic_arn: Integrations/SNS/Topic ARN
+sns_alerting_message_subject: Integrations/SNS/Message Subject
+# OpenLineagge
+openlineage_integration_host: Integrations/Openlineage/Host
+openlineage_integration_api_key: Integrations/Openlineage/API Key
+openlineage_integration_job_name: Integrations/Openlineage/Job Name
+openlineage_integration_namespace: Integrations/Openlineage/Namespace
+# datahub
+datahub_integration_url: Integrations/DataHub/URL
+
+expectations_suite_name: Validation/Suite Name
+tests: Validation/Tests
+
+
+# contract
+
+contract_tests: Schema/Columns
+expectations_file: Options/Expectations File
+contract_suite_name: Schema/Name
+contract_column_set_matching: Schema/Strict Set

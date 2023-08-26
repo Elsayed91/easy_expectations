@@ -1,0 +1,41 @@
+
+version: 1.0
+
+Metadata:
+  Data Product: Placeholder Data Product
+  Created: 2023-08-26
+  Modified: Placeholder Date
+  Ownership:
+    Maintainer: Placeholder Maintainer
+    Email: placeholder@example.com
+  Description: Placeholder Description
+
+Data Source:
+  Source: local:local_tests/sample_data.csv
+  Engine: Pandas
+Artifacts:
+   Location: local:local_tests/ge
+    
+Validation:
+  Suite Name: ex
+  Tests:
+  - expectation: expect_column_values_to_be_unique
+    kwargs:
+      column: Name
+  - expectation: expect_column_values_to_be_between
+    kwargs:
+      column: Age
+      max_value: 100
+      min_value: 0
+  - expectation: expect_column_values_to_be_between
+    kwargs:
+      column: Salary
+      max_value: 5000000
+      min_value: 0
+  - expectation: expect_column_values_to_be_in_set
+    kwargs:
+      column: Department
+      value_set:
+      - HR
+      - IT
+      - Finance

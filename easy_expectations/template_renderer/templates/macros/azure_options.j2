@@ -1,0 +1,17 @@
+{% macro azure_data_connector_options(data_connector) %}
+{% if data_connector.type == "azure" %}
+{% set has_azure_options = data_connector.azure_connection_string or data_connector.azure_account_url or data_connector.azure_protected_container_credentials %}
+{% if has_azure_options %}
+azure_options:
+{% if data_connector.azure_connection_string %}
+  conn_str: {{ data_connector.azure_connection_string }}
+{% endif %}
+{% if data_connector.azure_account_url %}
+  account_url: {{ data_connector.azure_account_url }}
+{% endif %}
+{% if data_connector.azure_protected_container_credentials %}
+  credentials: {{ data_connector.azure_protected_container_credentials }}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endmacro %}

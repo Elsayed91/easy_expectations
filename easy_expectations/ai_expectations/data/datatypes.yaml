@@ -1,0 +1,286 @@
+trino:
+  - BOOLEAN
+  - TINYINT
+  - SMALLINT
+  - INTEGER
+  - BIGINT
+  - REAL
+  - DOUBLE
+  - DECIMAL
+  - VARCHAR
+  - CHAR
+  - VARBINARY
+  - JSON
+  - DATE
+  - TIME
+  - TIME WITH TIME ZONE
+  - TIMESTAMP
+  - TIMESTAMP WITH TIME ZONE
+  - INTERVAL YEAR TO MONTH
+  - INTERVAL DAY TO SECOND
+  - ARRAY
+  - MAP
+  - ROW
+  - IPADDRESS
+  - UUID
+  - HyperLogLog
+  - P4HyperLogLog
+  - QDigest
+
+redshift:
+  - smallint
+  - integer
+  - bigint
+  - numeric
+  - real
+  - double precision
+  - boolean
+  - character
+  - char
+  - varchar
+  - character varying
+  - date
+  - timestamp without time zone
+  - timestamp with time zone
+  - geometry
+
+
+bigquery:
+  - ARRAY
+  - BIGNUMERIC
+  - BOOL
+  - BYTES
+  - DATE
+  - DATETIME
+  - FLOAT64
+  - GEOGRAPHY
+  - INT64
+  - INTEGER
+  - INT
+  - INTERVAL
+  - JSON
+  - NUMERIC
+  - STRING
+  - STRUCT
+  - TIME
+  - TIMESTAMP
+
+spark:
+  - BinaryType
+  - BooleanType
+  - ByteType
+  - DateType
+  - DecimalType
+  - DoubleType
+  - FloatType
+  - IntegerType
+  - LongType
+  - ShortType
+  - StringType
+  - TimestampType
+  - ArrayType
+  - MapType
+  - StructType
+
+pandas:
+  - bool
+  - int
+  - numpy.int8
+  - numpy.int16
+  - numpy.int32
+  - numpy.int64
+  - float
+  - numpy.float16
+  - numpy.float32
+  - numpy.float64
+  - complex
+  - str
+  - datetime.datetime
+  - datetime.timedelta
+  - bytes
+  - numpy.timedelta64
+  - numpy.datetime64
+
+sqlite:
+  - NULL
+  - INTEGER
+  - REAL
+  - TEXT
+  - BLOB
+
+mysql:
+  # Numeric Types
+  - TINYINT
+  - SMALLINT
+  - MEDIUMINT
+  - INT
+  - INTEGER
+  - BIGINT
+  - FLOAT
+  - DOUBLE
+  - DECIMAL
+  - NUMERIC
+  - BIT
+
+  # Date and Time Types
+  - DATE
+  - DATETIME
+  - TIMESTAMP
+  - TIME
+  - YEAR
+
+  # String Types
+  - CHAR
+  - VARCHAR
+  - TINYTEXT
+  - TEXT
+  - MEDIUMTEXT
+  - LONGTEXT
+  - BINARY
+  - VARBINARY
+  - TINYBLOB
+  - MEDIUMBLOB
+  - BLOB
+  - LONGBLOB
+  - ENUM
+  - SET
+
+  # Spatial Types
+  - GEOMETRY
+  - POINT
+  - LINESTRING
+  - POLYGON
+  - MULTIPOINT
+  - MULTILINESTRING
+  - MULTIPOLYGON
+  - GEOMETRYCOLLECTION
+
+  # JSON Type
+  - JSON
+
+mssql:
+  # Exact Numerics
+  - BIT
+  - TINYINT
+  - SMALLINT
+  - INT
+  - BIGINT
+  - DECIMAL
+  - NUMERIC
+  - SMALLMONEY
+  - MONEY
+
+  # Approximate Numerics
+  - FLOAT
+  - REAL
+  
+  # Date and Time
+  - DATE
+  - DATETIME
+  - DATETIME2
+  - SMALLDATETIME
+  - DATETIMEOFFSET
+  - TIME
+  
+  # Character Strings
+  - CHAR
+  - VARCHAR
+  - TEXT
+  
+  # Unicode Character Strings
+  - NCHAR
+  - NVARCHAR
+  - NTEXT
+  
+  # Binary Strings
+  - BINARY
+  - VARBINARY
+  - IMAGE
+  
+  # Other Data Types
+  - CURSOR
+  - HIERARCHYID
+  - SQL_VARIANT
+  - TABLE
+  - UNIQUEIDENTIFIER
+  - XML
+  
+  # Spatial Types
+  - GEOMETRY
+  - GEOGRAPHY
+  
+  # Temporal Tables
+  - DATETIME2 GENERATED ALWAYS AS ROW START
+  - DATETIME2 GENERATED ALWAYS AS ROW END
+  
+  # JSON Types (from SQL Server 2016 onwards)
+  - JSON
+
+postgresql:
+  - bigint
+  - bigserial
+  - integer
+  - smallint
+  - smallserial
+  - serial
+  - bit
+  - bit varying
+  - boolean
+  - bytea
+  - character
+  - character varying
+  - text
+  - cidr
+  - inet
+  - point
+  - polygon
+  - date
+  - double precision
+  - interval
+  - time
+  - time with time zone
+  - timestamp
+  - timestamp with time zone
+  - json
+  - money
+  - numeric
+  - uuid
+  - xml
+  - real
+
+snowflake:
+  - NUMBER
+  - DECIMAL
+  - NUMERIC
+  - INT
+  - INTEGER
+  - BIGINT
+  - SMALLINT
+  - TINYINT
+  - BYTEINT
+  - FLOAT
+  - FLOAT4
+  - FLOAT8
+  - DOUBLE
+  - DOUBLE PRECISION
+  - REAL
+  - VARCHAR
+  - CHAR
+  - CHARACTER
+  - STRING
+  - TEXT
+  - BINARY
+  - VARBINARY
+  - BOOLEAN
+  - DATE
+  - DATETIME
+  - TIME
+  - TIMESTAMP
+  - TIMESTAMP_LTZ
+  - TIMESTAMP_NTZ
+  - TIMESTAMP_TZ
+  - VARIANT
+  - OBJECT
+  - ARRAY
+  - GEOGRAPHY
+  - GEOMETRY

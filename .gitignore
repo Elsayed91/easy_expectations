@@ -1,0 +1,14 @@
+.vscode
+**/pytest_cache/
+**/__pycache__/
+local_tests
+Makefile
+gcp_key_spark.json
+.env
+.coverage
+htmlcov
+.ruff_cache
+ge_local
+easy_expectations.log
+testrun.py
+docs/images/demo.gif:Zone.Identifier

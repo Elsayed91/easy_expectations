@@ -1,0 +1,51 @@
+{% macro store_backend(store) %}
+  class_name: {{ store.backend }}
+  {% if store.type == "local" %}
+      base_directory: {{ store.base_dir }}
+  {% elif store.type == "azure" %}
+      container: {{ store.container }}
+  {% if store.prefix and store.prefix != '' %}
+      prefix: {{ store.prefix }}
+  {% endif %}
+      connection_string: {{ store.connection_string }}
+  {% elif store.type == "s3" %}
+      bucket: {{ store.bucket }}
+  {% if store.prefix and store.prefix != '' %}
+      prefix: {{ store.prefix }}
+  {% endif %}
+  {% if store.endpoint_url or store.region_name or store.aws_access_key_id or store.aws_secret_access_key or store.aws_session_token or store.assume_role_arn or store.session_duration_in_seconds %}
+      boto3_options:
+    {% if store.endpoint_url %}
+        endpoint_url: {{ store.endpoint_url }}
+    {% endif %}
+    {% if store.region_name %}
+        region_name: {{ store.region_name }}
+    {% endif %}
+    {% if store.aws_access_key_id %}
+        aws_access_key_id: {{ store.aws_access_key_id }}
+    {% endif %}
+    {% if store.aws_secret_access_key %}
+        aws_secret_access_key: {{ store.aws_secret_access_key }}
+    {% endif %}
+    {% if store.aws_session_token %}
+        aws_session_token: {{ store.aws_session_token }}
+    {% endif %}
+    {% if store.assume_role_arn %}
+        assume_role_arn: {{ store.assume_role_arn }}
+    {% endif %}
+    {% if store.assume_role_duration %}
+        assume_role_duration: {{ store.assume_role_duration }}
+    {% endif %}
+  {% endif %}
+  {% elif store.type == "gcs" %}
+  {% if store.gcp_project %}
+      project: {{ store.gcp_project }}
+  {% endif %}
+      bucket: {{ store.bucket }}
+  {% if store.prefix and store.prefix != '' %}
+      prefix: {{ store.prefix }}
+  {% endif %}
+  {% elif store.type == "postgres_database" %}
+      credentials: {{ store.db_credentials }}
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,200 @@
+# Easy Expectations Configuration File
+# This file provides a skeleton to configure various options for data expectations.
+# Fill in the required values as needed.
+
+Options:
+  Expectations File: # Specify name of expectations file - it should already exists within the artifacts path/expectations or expectations custom path
+  Batch:
+    Limit: # Specify the batch limit, e.g., 2
+    Identifiers:
+      key: value # Specify the batch identifiers key value pairs, can be
+      # multiple, e.g., key1: value1, key2: value2
+  Checkpoint Name: # Specify the checkpoint name, e.g., my_super_checkpoint
+  Disable Docs: # Enable or disable docs, e.g., False
+  Run Name: # Specify the run name, e.g., "%Y%m%d%H%M-sample_data"
+  Custom Expectations Path: # Specify the custom expectations path
+  GCP Defaults:
+    GCP Project: # Specify the default GCP project, e.g., default_project
+  Success Threshold: # Specify the success threshold, e.g., 95
+  AWS Defaults:
+    S3 Region: # Specify the default S3 region, e.g., eu-west
+    Boto Endpoint: # Specify the Boto endpoint
+    Assume Role Arn: # Specify the assume role ARN
+    Assume Role Duration: # Specify the assume role duration
+    AWS Session Token: # Specify the AWS session token
+    AWS Secret Access Key: # Specify the AWS secret access key
+    AWS Access Key ID: # Specify the AWS access key ID
+  Azure Defaults:
+    Azure Connection String: # Specify the Azure connection string
+    Azure Account URL: # Specify the Azure account URL
+    Azure Protected Container Credentials: # Specify the Azure protected container credentials
+  Print Summary Table: # Specify if the summary table should be printed, e.g., True
+  Generate Summary CSV: # Specify if the summary CSV should be generated, e.g., True
+  Enable Statistics: # Enables usage statistics
+  Connector Query Index: # value for connector query index
+  Result Format: # Result Format, defaults to complete, not recommended to change
+  Evaluation Parameters: # mapping for custom evaluation parameters
+
+Data Source:
+  Source: # Specify the source path, e.g., local:///home/username/sample_data.csv
+  Engine: # Specify the engine, e.g., Spark
+  Name: # Specify the name for the source, e.g., my_local_source
+  Table: # Specify the table name if applicable
+  Query: # Specify a query if applicable
+  Azure Connection String: # Specify the Azure connection string if applicable
+  Azure Account URL: # Specify the Azure account URL if applicable
+  Azure Protected Container Credentials: # Specify Azure protected container credentials if applicable
+  S3 Region: # Specify the S3 region if applicable
+  Boto Endpoint: # Specify the Boto endpoint if applicable
+  Assume Role Arn: # Specify the assume role ARN if applicable
+  Assume Role Duration: # Specify the assume role duration if applicable
+  AWS Session Token: # Specify the AWS session token if applicable
+  AWS Secret Access Key: # Specify the AWS secret access key if applicable
+  AWS Access Key ID: # Specify the AWS access key ID if applicable
+
+Artifacts:
+  Location: # Specify the general location for artifacts, e.g., local:///path/to/artifacts
+
+  # Stores Configuration
+  Stores:
+    # Checkpoint Configuration
+    Checkpoint:
+      Name: # Name of the checkpoint
+      Location: # Location of the checkpoint, e.g., gs://path/to/checkpoint
+      Azure Connection String: # Azure connection string if applicable
+      Azure Account URL: # Azure account URL if applicable
+      Azure Protected Container Credentials: # Azure protected container credentials if applicable
+      S3 Region: # S3 region if applicable
+      Boto Endpoint: # Boto endpoint if applicable
+      Assume Role Arn: # Assume role ARN if applicable
+      Assume Role Duration: # Assume role duration if applicable
+      AWS Session Token: # AWS session token if applicable
+      AWS Secret Access Key: # AWS secret access key if applicable
+      AWS Access Key ID: # AWS access key ID if applicable
+      GCP Project: # GCP project if applicable
+# Validations Configuration
+Validations:
+  Name: # Name of validations (Optional)
+  Location: # Location for validations, e.g., gs://path/to/validations
+  Azure Connection String: # Azure connection string if applicable
+  Azure Account URL: # Azure account URL if applicable
+  Azure Protected Container Credentials: # Azure protected container credentials if applicable
+  S3 Region: # S3 region if applicable
+  Boto Endpoint: # Boto endpoint if applicable
+  Assume Role Arn: # Assume role ARN if applicable
+  Assume Role Duration: # Assume role duration if applicable
+  AWS Session Token: # AWS session token if applicable
+  AWS Secret Access Key: # AWS secret access key if applicable
+  AWS Access Key ID: # AWS access key ID if applicable
+  GCP Project: # GCP project if applicable
+
+# Expectations Configuration
+Expectations:
+  Name: # Name of expectations (Optional)
+  Location: # Location for expectations, e.g., gs://path/to/expectations
+  # ... Same fields as Validations
+
+# Evaluation Parameter Configuration
+Evaluation Parameter:
+  Name: # Name of the evaluation parameter (Optional)
+
+# Documentation Sites Configuration for artifacts
+Documentation Sites:
+  - Name: # Name of the documentation site for artifacts (Optional)
+    Location: # Location of the site, e.g., local://path/to/site
+    Tutorial: # Set to True if this site includes tutorials
+    Azure Connection String: # Azure connection string if applicable
+    Azure Account URL: # Azure account URL if applicable
+    Azure Protected Container Credentials: # Azure protected container credentials if applicable
+    S3 Region: # S3 region if applicable
+    Boto Endpoint: # Boto endpoint if applicable
+    Assume Role Arn: # Assume role ARN if applicable
+    Assume Role Duration: # Assume role duration if applicable
+    AWS Session Token: # AWS session token if applicable
+    AWS Secret Access Key: # AWS secret access key if applicable
+    AWS Access Key ID: # AWS access key ID if applicable
+    GCP Project: # GCP project if applicable
+
+# Integrations Configuration
+Integrations:
+  Slack:
+    Webhook: # Slack Webhook URL
+    Token: # Optional Token
+    Notify On: # Notification condition, e.g., "failure"
+    Channel: # Slack Channel Name
+    Show Failed Expectations: # Include failed expectations in the notification
+    Reference Sites: # Additional reference sites, if any
+
+  Email:
+    SMTP Address: # SMTP Address for Email
+    SMTP Port: # SMTP Port, typically 587
+    Sender Email: # Sender Email Address
+    Sender Password: # Sender Email Password
+    Sender Alias: # Sender Display Name
+    Receiver Emails: # List of Receiver Email Addresses
+    Use TLS: # Use TLS for email sending
+    Use SSL: # Use SSL for email sending
+    Notify On: # Notification condition, e.g., "success"
+    Reference Sites: # Additional reference sites, if any
+
+  Teams:
+    Webhook: # Microsoft Teams Webhook URL
+    Notify On: # Notification condition, if any
+
+  Opsgenie:
+    API Key: # Opsgenie API Key
+    Region: # Opsgenie region, e.g., "us"
+    Priority: # Notification priority, e.g., "high"
+    Notify On: # Notification condition, e.g., "failure"
+    Tags: # Additional tags if any
+
+  Pagerduty:
+    API Key: # Pagerduty API Key
+    Routing Key: # Pagerduty Routing Key
+    Notify On: # Notification condition, if any
+
+  SNS:
+    Topic ARN: # Amazon SNS Topic ARN
+    Message Subject: # Message Subject for notification
+
+  Openlineage:
+    Host: # Openlineage host
+    API Key: # Openlineage API Key
+    Job Name: # Openlineage Job Name
+    Namespace: # Openlineage Namespace
+
+  Datahub:
+    URL: # Datahub URL
+
+# Validation Configuration
+Validation:
+  Suite Name: # Name of the validation suite
+  Tests: # List of tests, users can add any number of tests
+    - Expectation: # Expectation name, e.g., "expect_column_values_to_not_be_null"
+      kwargs: # Keyword arguments/options for the expectation, consult documentation for each specific expectation
+      meta: {} # Metadata for the expectation
+
+
+Schema:
+  Name: # Name of data contract suite, optional
+  Columns:
+    - name: #column name
+      description: # optional description
+      mode: #nullable or required
+      type: # datatype - must mathc source native datatype
+  Strict Set: # match all the column listed
+
+# You can change the structure above to any structure you fancy
+# but you need to reference the key when running the package.
+# for example
+# Custom Mapping:
+#   artifacts_path: Artifacts/xd/Location
+# would allow u to declare the file as
+# Artifacts:
+#   xd:
+#     Location:
+# this is mainly a quality of life functionality in case you don't like
+# the default structure
+
+
+

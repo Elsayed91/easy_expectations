@@ -1,0 +1,92 @@
+gcs:
+  type: "filesystem"
+  pattern: "^gs://"
+  backend_type: TupleGCSStoreBackend
+  inferred_connector: InferredAssetGCSDataConnector
+  cloud_options:
+    - gcp_project
+
+s3:
+  type: "filesystem"
+  pattern: "^s3://"
+  backend_type: TupleS3StoreBackend
+  inferred_connector: InferredAssetS3DataConnector
+  cloud_options:
+    - "boto_endpoint"
+    - "s3_region"
+    - "aws_access_key_id"
+    - "aws_secret_access_key"
+    - "aws_session_token"
+    - "assume_role_arn"
+    - "assume_role_duration"
+
+azure:
+  type: "filesystem"
+  pattern: "^https://.*\\.blob\\.core\\.windows\\.net"
+  backend_type: TupleAzureBlobStoreBackend
+  inferred_connector: InferredAssetAzureDataConnector
+  cloud_options:
+    - azure_connection_string
+    - azure_account_url
+    - azure_protected_container_credentials
+
+local:
+  type: "filesystem"
+  pattern: "^local:"
+  backend_type: TupleFilesystemStoreBackend
+  inferred_connector: InferredAssetFilesystemDataConnector
+
+dbfs:
+  type: "filesystem"
+  pattern: "^/dbfs/"
+  inferred_connector: InferredAssetDBFSDataConnector
+
+in_memory:
+  type: "in_memory"
+  pattern: "^[^/.]+$"
+
+postgresql_database:
+  type: "database"
+  pattern: "postgresql+psycopg2://"
+  backend_type: DatabaseStoreBackend
+  inferred_connector: InferredAssetSqlDataConnector
+
+bigquery_database:
+  type: "database"
+  pattern: "bigquery://"
+  inferred_connector: InferredAssetSqlDataConnector
+
+athena_database:
+  type: "database"
+  pattern: "awsathena+rest://@athena"
+  inferred_connector: InferredAssetSqlDataConnector
+
+mssql_database:
+  type: "database"
+  pattern: "mssql+pyodbc://"
+  inferred_connector: InferredAssetSqlDataConnector
+
+mysql_database:
+  type: "database"
+  pattern: "mysql+pymysql://"
+  inferred_connector: InferredAssetSqlDataConnector
+
+redshift_database:
+  type: "database"
+  pattern: "redshift.amazonaws.com"
+  inferred_connector: InferredAssetSqlDataConnector
+
+snowflake_database:
+  type: "database"
+  pattern: "snowflake://"
+  inferred_connector: InferredAssetSqlDataConnector
+
+sqlite_database:
+  type: "database"
+  pattern: "sqlite://"
+  inferred_connector: InferredAssetSqlDataConnector
+
+trino_database:
+  type: "database"
+  pattern: "trino://"
+  inferred_connector: InferredAssetSqlDataConnector

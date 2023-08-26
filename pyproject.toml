@@ -1,0 +1,101 @@
+[tool.poetry]
+name = "easy-expectations"
+version = "0.1.0"
+description = "A package that simplifies usage of Great Expectations tool for Data Validation."
+authors = ["Elsayed91 <elsayed.is@outlook.com>"]
+readme = "docs/pypi_readme.md"
+packages = [{ include = "easy_expectations" }]
+repository = "https://github.com/Elsayed91/easy_expectations"
+keywords = ["Great Expectations", "data quality", "data validation", "data contracts"]
+
+[tool.poetry.scripts]
+easy_expectations = "easy_expectations.cli.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.9, <3.11"
+great_expectations = "^0.17.7"
+pyarrow = "^12.0.1"
+boto3 = { version = "^1.28.15", optional = true }
+gcsfs = { version = "^2023.6.0", optional = true }
+google-cloud-storage = { version = "^2.10.0", optional = true }
+google-cloud-secret-manager = { version = "^2.16.2", optional = true }
+openlineage-integration-common = { version = "^1.0.0", optional = true }
+acryl-datahub = { version = "^0.10.5.5", optional = true }
+cerberus = "^1.3.5"
+openai = {version = "^0.27.8", optional = true}
+rich = "^13.5.2"
+sqlalchemy-bigquery = {extras = ["bigquery"], version = "^1.8.0"}
+google-cloud-bigquery-storage = {version = "^2.22.0", extras = ["bigquery"]}
+
+
+
+[tool.poetry.extras]
+s3 = ["boto3"]
+gcp = ["google-cloud-secret-manager", "google-cloud-storage", "gcsfs"]
+openlineage = ["openlineage-integration-common"]
+datahub = ["acryl-datahub"]
+openai = ["openai"]
+bigquery = ["google-cloud-bigquery-storage", "sqlalchemy-bigquery"]
+
+[tool.black]
+target-version = ["py38", "py39", "py310"]
+extend_excludes = '''
+(
+     docs/.*
+    | .*.ge_store_backend_id
+)
+'''
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+extend_skip_glob = ['docs/*']
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+line_length = 79
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pre-commit = "^3.3.3"
+flake8 = "^6.1.0"
+isort = "^5.12.0"
+localstack = "^2.2.0"
+awscli-local = "^0.21"
+pytest-mock = "^3.11.1"
+black = "^23.7.0"
+ruff = "^0.0.284"
+shed = "^2023.6.1"
+coverage = "^7.3.0"
+pytest-cov = "^4.1.0"
+autopep8 = "^2.0.3"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 90
+disable = """
+    no-member
+"""
+good-names = ["k", "v", "d", "e"]
+
+
+[tool.pytest.ini_options]
+filterwarnings = "ignore::DeprecationWarning"
+pythonpath = ["easy_expectations"]
+# addopts = "--cov --cov-report term-missing --cov-report html"
+testpaths = "tests"
+log_level = "info"
+
+[tool.coverage.run]
+omit = [
+    "tests/**"
+]
+
+
+[tool.ruff.pydocstyle]
+convention = "google"

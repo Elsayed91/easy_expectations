@@ -1,0 +1,45 @@
+"function","pandas","spark","sqlite","postgresql","mysql","mssql","trino","redshift","bigquery","snowflake"
+"expect_column_values_to_match_regex_list(column, regex_list: The list of regular expressions which the column entries should match)",True,True,True,True,True,False,True,True,False,True
+"expect_column_values_to_match_json_schema(column, json_schema: The JSON schema (in string form) to match)",True,True,False,False,False,False,False,False,False,False
+"expect_column_values_to_match_strftime_format(column, strftime_format: A strftime format string to use for matching)",True,True,False,False,False,False,False,False,False,False
+"expect_column_values_to_match_regex(column, regex: regex the col entries should match.)",True,True,True,True,True,False,True,True,False,True
+"expect_column_values_to_not_be_null(column)",True,True,True,True,True,True,True,True,True,True
+"expect_column_max_to_be_between(column, min_value, max_value, strict_min, strict_max)",True,True,True,True,True,True,True,True,True,True
+"expect_column_most_common_value_to_be_in_set(column, value_set: A list of potential values to match)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_not_be_in_set(column, value_set: A set of objects used for comparison.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_not_match_regex_list(column, regex_list: regex list the column entries should not match)",True,True,True,True,True,False,True,True,False,True
+"expect_column_values_to_be_of_type(column, type_: A string representing the data type that each column should have as entries. Valid types are defined by the current backend implementation and are dynamically loaded. For example, valid types for PandasDataset include any numpy dtype values (such as 'int64') or native python types (such as 'int'), whereas valid types for a SqlAlchemyDataset include types named by the current driver such as 'INTEGER' in most SQL dialects and 'TEXT' in dialects such as postgresql. Valid types for SparkDFDataset include 'StringType', 'BooleanType' and other pyspark-defined type names. Note that the strings representing these types are sometimes case-sensitive. For instance, with a Pandas backend timestamp will be unrecognized and fail the expectation, while Timestamp would pass with valid data.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_be_dateutil_parseable(column)",True,False,False,False,False,False,False,False,False,False
+"expect_column_unique_value_count_to_be_between(column, min_value: min unique values, max_value)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_not_match_like_pattern_list(column, like_pattern_list): The list of like pattern expressions the column entries should NOT match.)",False,False,True,True,True,True,True,True,False,True
+"expect_table_row_count_to_equal(value: expected num of rows)",True,True,True,True,True,True,True,True,True,True
+"expect_column_min_to_be_between(column, min_value,max_value,strict_min,strict_max)",True,True,True,True,True,True,True,True,True,True
+"expect_table_row_count_to_be_between(min_value, max_value)",True,True,True,True,True,True,True,True,True,True
+"expect_compound_columns_to_be_unique(column_list: Set of columns to check)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_be_decreasing(column)",True,True,False,False,False,False,False,False,False,False
+"expect_column_values_to_be_between(column, min_value:  mini value for a column entry, max_value: max value for a column entry, strict_min, strict_max)",True,True,True,True,False,True,True,True,True,True
+"expect_table_columns_to_match_ordered_list(column_list: cols in the correct order.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_pair_values_to_be_equal(column_A: The first column name, column_B: The second column name)",True,True,True,True,True,True,True,True,True,True
+"expect_column_distinct_values_to_contain_set(column, value_set: A set of objects used for comparison.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_be_increasing(column)",True,True,False,False,False,False,False,False,False,False
+"expect_column_values_to_be_in_set(column, value_set: A set of objects used for comparison.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_distinct_values_to_be_in_set(column, value_set: A set of objects used for comparison.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_be_null(column)",True,True,True,True,True,True,True,True,True,True
+"expect_column_to_exist(column)",True,True,True,True,True,True,True,True,True,True
+"expect_table_column_count_to_be_between(min_value, max_value)",True,True,True,True,True,True,True,True,True,True
+"expect_column_pair_values_to_be_in_set(column_A: The first column name, column_B: The second column name, value_pairs_set (list of tuples): All the valid pairs to be matched)",True,True,True,True,True,True,True,True,True,True
+"expect_table_row_count_to_equal_other_table(other_table_name: The name of the other table.)",False,False,True,True,True,True,True,True,False,True
+"expect_column_value_lengths_to_be_between(column, min_value, max_value: max length.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_be_in_type_list(column, type_list: A list of strings representing the data type that each column should have as entries. Valid types are defined by the current backend implementation and are dynamically loaded. For example, valid types for PandasDataset include any numpy dtype values (such as 'int64') or native python types (such as 'int'), whereas valid types for a SqlAlchemyDataset include types named by the current driver such as 'INTEGER' in most SQL dialects and 'TEXT' in dialects such as postgresql. Valid types for SparkDFDataset include 'StringType', 'BooleanType' and other pyspark-defined type names.)",True,True,True,True,False,True,True,True,True,True
+"expect_column_values_to_match_like_pattern_list(column, like_pattern_list): The list of like pattern expressions the column entries should match.)",False,False,True,True,True,True,True,True,False,True
+"expect_column_value_lengths_to_equal(column, value: The expected value for a column entry length.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_not_match_regex(column, regex: regex the column entries should NOT match.)",True,True,False,True,True,False,True,True,False,True
+"expect_column_distinct_values_to_equal_set(column, value_set: A set of objects used for comparison.)",True,True,True,True,True,True,True,True,True,Tru
+"function","Pandas","Spark","SQLite","PostgreSQL","MySQL","MSSQL","Trino","Redshift","BigQuery","Snowflake"
+"expect_column_values_to_not_match_like_pattern(column, like_pattern: The like pattern expression the column entries should NOT match.)",False,False,True,True,True,True,True,True,False,True
+"expect_table_column_count_to_equal(value)",True,True,True,True,True,True,True,True,True,True
+"expect_table_columns_to_match_set(column_set: cols, in any order., exact_match: Whether the list of columns must exactly match the observed columns.)",True,True,True,True,True,True,True,True,True,True
+"expect_column_values_to_match_like_pattern(column, like_pattern: The like pattern expression the column entries should match.)",False,False,True,True,True,True,True,True,False,True
+"expect_column_values_to_be_json_parseable(column)",True,True,True,True,True,True,True,True,True,True
+"expect_column_sum_to_be_between(column, min_value, max_value, strict_min, strict_max)",True,True,True,True,False,True,True,True,True,True
+"expect_column_values_to_be_unique(column)",True,True,True,True,False,True,True,True,True,True
