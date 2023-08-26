@@ -73,7 +73,7 @@ Metadata:
     Email: Elsayed91@outlook.com
   Description: |
     Data Validation for HR data originating from GCS.
-    Altering via Slack on channel #alerts.
+    Alerting via Slack on channel #alerts.
 
 Data Source:
   Source: gs://mybucket/myfile/myfiles-*.parquet
