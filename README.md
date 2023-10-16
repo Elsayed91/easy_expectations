@@ -76,6 +76,10 @@ Lets say we want to create a config file to use in a data validation pipeline.
 the data is on gcs and we want to save the artifacts locally.
 We want to setup slack alerting as well as Datahub integration for metadata tracking.
 
+```python
+pip install easy-expectations
+```
+
 ```yaml
 version: 1.0
 
@@ -116,21 +120,21 @@ Validation:
       kwargs:
         column: Name
       meta: {}
-    - Expectation: expect_column_values_to_be_of_type
+    - expectation: expect_column_values_to_be_of_type
       kwargs:
         column: Name
         type_: StringType
-    - Expectation: expect_column_values_to_be_between
+    - expectation: expect_column_values_to_be_between
       kwargs:
         column: Age
         min_value: 25
         max_value: 40
-    - Expectation: expect_column_values_to_be_between
+    - expectation: expect_column_values_to_be_between
       kwargs:
         column: Salary
         min_value: 50000
         max_value: 80000
-    - Expectation: expect_column_values_to_be_in_set
+    - expectation: expect_column_values_to_be_in_set
       kwargs:
         column: Department
         value_set: ["HR", "IT", "Finance"]
